@@ -1,11 +1,10 @@
 import './App.css';
-import Sidebar from "./Components/Sidebar";
+import Nav from "./Components/Nav";
 import Sorter from "./Components/Sorter";
 
 function App() {
   return (
-    <div className="container">
-        {/*<Sidebar/>*/}
+    <div>
         <Sorter/>
     </div>
   );
