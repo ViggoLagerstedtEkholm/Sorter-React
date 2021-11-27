@@ -1,4 +1,5 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {SortingContext} from "./AlgorithmProvider";
 
 export function NavItem(props){
     const [open, setOpen] = useState(false);

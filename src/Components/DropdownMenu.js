@@ -1,13 +1,19 @@
-import {BUBBLE_SORT, INSERTION_SORT} from "./Algorithms";
+import {Algorithms} from "./Algorithms/Algorithms";
 import {useContext} from "react";
 import {AlgorithmContext} from "./AlgorithmProvider";
 
 function DropdownMenu() {
+    const {setAlgorithm} = useContext(AlgorithmContext);
+
     function DropdownItem(props){
-        const {setAlgorithm} = useContext(AlgorithmContext);
+        const {algorithm} = props;
+
+        const setAlgo = () =>{
+            setAlgorithm(algorithm);
+        }
 
         return(
-            <button className="menu-item" onClick={setAlgorithm(props.children)}>
+            <button className="menu-item" onClick={setAlgo}>
                 {props.children}
             </button>
         )
@@ -15,7 +21,9 @@ function DropdownMenu() {
 
     return (
         <div className="dropdown scroll">
-            <DropdownItem>{BUBBLE_SORT}</DropdownItem>
+            {Algorithms.map(function (algorithm, index) {
+                return (<DropdownItem algorithm={algorithm} key={index}>{algorithm}</DropdownItem>)
+            })}
         </div>
     );
 }

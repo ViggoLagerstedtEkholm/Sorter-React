@@ -16,8 +16,17 @@
   margin-top: auto;
 }
 
-.array-bar {
+.array-bar{
+  padding-right: 1px;
+  padding-left: 1px;
   background-color: #444444;
+}
+
+.array-bar p{
+  background-color: #444444;
+  text-align: center;
+  overflow: hidden;
+  font-size: 0.7vw;
 }
 
 .navbar{
@@ -26,13 +35,27 @@
   padding: 0 1rem;
 }
 
+.sorting{
+  filter: grayscale(0.20);
+}
+
 .selected{
   font-size: 5vh;
-  max-height: 10vh;
+  max-height: 6vh;
   text-align: center;
   text-transform: uppercase;
   opacity: 0.65;
   z-index: 1;
+}
+
+.creator{
+  font-size: 3vh;
+  max-height: 4vh;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.3;
+  z-index: 1;
+
 }
 
 .navbar-nav{
