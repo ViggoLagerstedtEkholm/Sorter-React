@@ -1,5 +1,4 @@
 export const BubbleSort = (array) => {
-    console.log("Test", array);
     const original = [...array];
     const steps = [];
     Sort(original, steps);

@@ -1,21 +1,21 @@
-import {useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {BubbleSort} from "./BubbleSort";
 import Nav from "./Nav";
 
+import {BUBBLE_SORT} from "./Algorithms";
+import {AlgorithmContext} from "./AlgorithmProvider";
+
 const MAX_VAL = 100;
-const MIN_VAL = 10;
+const MIN_VAL = 20;
 const RUN_AFTER_SLEEP = 1;
 const AMOUNT = 100;
 const SHUFFLE_SLEEP = 10;
-const RUN_SLEEP = 5;
+const RUN_SLEEP = 50;
 
 function Sorter() {
     const [array, setArray] = useState(Array.from({length: AMOUNT}, () => 50));
     const [colors, setColorArray] = useState(Array.from({length: AMOUNT}, () => 100));
-
-    useEffect(() => {
-        console.log(array);
-    }, [array]);
+    const {algorithm} = useContext(AlgorithmContext);
 
     function random(){
         return Math.floor(Math.random() * (MAX_VAL - MIN_VAL + 1)) + MIN_VAL;
@@ -28,7 +28,14 @@ function Sorter() {
     async function sort() {
         const shuffled = Array.from({length: AMOUNT}, () => Math.floor(Math.random() * random()));
         await shuffle(shuffled);
-        const animation = BubbleSort(shuffled);
+
+        let animation = [];
+
+        // eslint-disable-next-line default-case
+        switch (algorithm){
+            case BUBBLE_SORT: animation = BubbleSort(shuffled);
+        }
+
         await visualize(animation);
         await runWhenSorted();
     }
@@ -55,7 +62,7 @@ function Sorter() {
 
                 const [currentSortingIndex] = change;
                 setColor(currentSortingIndex);
-                await timeout(SHUFFLE_SLEEP);
+                await timeout(RUN_SLEEP);
             }
             resolve();
         });
@@ -96,6 +103,11 @@ function Sorter() {
     return(
         <div>
             <Nav sort={sort}/>
+
+            <div className="selected">
+                {algorithm}
+            </div>
+
             <div className="visualizer-container">
                 <div className="array-container">
                     {array.map((barHeight, index) => (

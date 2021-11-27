@@ -1,13 +1,13 @@
 import './App.css';
-import Nav from "./Components/Nav";
 import Sorter from "./Components/Sorter";
+import AlgorithmProvider from "./Components/AlgorithmProvider";
 
 function App() {
-  return (
-    <div>
-        <Sorter/>
-    </div>
-  );
+    return (
+      <AlgorithmProvider>
+          <Sorter/>
+      </AlgorithmProvider>
+    );
 }
 
 export default App;
