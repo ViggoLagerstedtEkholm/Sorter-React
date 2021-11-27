@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Sorter-React/static/css/main.0dac1c61.chunk.css",
+    "main.js": "/Sorter-React/static/js/main.85909642.chunk.js",
+    "main.js.map": "/Sorter-React/static/js/main.85909642.chunk.js.map",
+    "runtime-main.js": "/Sorter-React/static/js/runtime-main.fff21fa3.js",
+    "runtime-main.js.map": "/Sorter-React/static/js/runtime-main.fff21fa3.js.map",
+    "static/js/2.6c7766d1.chunk.js": "/Sorter-React/static/js/2.6c7766d1.chunk.js",
+    "static/js/2.6c7766d1.chunk.js.map": "/Sorter-React/static/js/2.6c7766d1.chunk.js.map",
+    "static/js/3.2e58797f.chunk.js": "/Sorter-React/static/js/3.2e58797f.chunk.js",
+    "static/js/3.2e58797f.chunk.js.map": "/Sorter-React/static/js/3.2e58797f.chunk.js.map",
+    "index.html": "/Sorter-React/index.html",
+    "static/css/main.0dac1c61.chunk.css.map": "/Sorter-React/static/css/main.0dac1c61.chunk.css.map",
+    "static/js/2.6c7766d1.chunk.js.LICENSE.txt": "/Sorter-React/static/js/2.6c7766d1.chunk.js.LICENSE.txt",
+    "static/media/bar-chart-676.2c74a934.svg": "/Sorter-React/static/media/bar-chart-676.2c74a934.svg",
+    "static/media/play-button-svgrepo-com.26346b8f.svg": "/Sorter-React/static/media/play-button-svgrepo-com.26346b8f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fff21fa3.js",
+    "static/js/2.6c7766d1.chunk.js",
+    "static/css/main.0dac1c61.chunk.css",
+    "static/js/main.85909642.chunk.js"
+  ]
+}
